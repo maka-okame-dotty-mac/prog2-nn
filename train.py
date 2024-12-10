@@ -68,6 +68,8 @@ for k in range(n_epochs):
     time_end = time.time()
     loss_train_histry.append(loss_train)
     print(f'train loss: {loss_train:3f} ({time_end-time_start}s)')
+    print(f'train loss: {loss_train:3f} ({time_end-time_start:.1f}s)')
+
 
     loss_test = models.test(model, dataloader_test, loss_fn)
     loss_test_histry.append(loss_test)
